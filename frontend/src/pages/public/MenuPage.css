@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+.menu-page { min-height: 100vh; background: #faf6f0; font-family: 'DM Sans', sans-serif; }
+
+/* Header */
+.menu-page-header {
+  position: relative;
+  padding: 80px 48px 48px;
+  background: #1c0f07;
+  overflow: hidden;
+}
+.menu-page-header-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, #1c0f07 0%, #6b3a2a 100%);
+  opacity: 0.9;
+}
+.menu-page-header-content { position: relative; z-index: 1; }
+.menu-back {
+  display: inline-block; color: rgba(255,255,255,0.6);
+  font-size: 0.85rem; text-decoration: none; margin-bottom: 20px;
+  transition: color .2s;
+}
+.menu-back:hover { color: #c17f4a; }
+.menu-page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 700; color: #fff; line-height: 1.05;
+  margin-bottom: 10px;
+}
+.menu-page-title em { font-style: italic; color: #c17f4a; }
+.menu-page-sub { color: rgba(255,255,255,0.6); font-size: 0.95rem; font-weight: 300; }
+
+/* Cart FAB */
+.cart-fab {
+  position: absolute; bottom: -22px; right: 48px;
+  background: #c17f4a; color: #fff;
+  border: none; border-radius: 40px;
+  padding: 12px 24px; font-size: 1rem; font-weight: 600;
+  cursor: pointer; box-shadow: 0 6px 24px rgba(193,127,74,0.4);
+  font-family: inherit; display: flex; align-items: center; gap: 8px;
+  transition: background .2s, transform .2s; z-index: 10;
+}
+.cart-fab:hover { background: #a86a38; transform: translateY(-2px); }
+.cart-fab-badge {
+  background: #1c0f07; color: #fff;
+  font-size: 0.75rem; font-weight: 700;
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Toolbar */
+.menu-page-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  padding: 28px 48px 0;
+  background: #fff;
+  border-bottom: 1.5px solid #e8e0d5;
+  position: sticky; top: 0; z-index: 50;
+}
+.menu-page-cats { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 16px; }
+.menu-cat-pill {
+  padding: 8px 18px; border: 1.5px solid #e0d0bc;
+  border-radius: 24px; background: #fff;
+  color: #6b3a2a; font-size: 0.85rem; font-weight: 500;
+  cursor: pointer; font-family: inherit;
+  transition: all .15s;
+}
+.menu-cat-pill:hover  { border-color: #c17f4a; }
+.menu-cat-pill.active { background: #1c0f07; border-color: #1c0f07; color: #fff; }
+
+.menu-search-wrap {
+  position: relative; display: flex; align-items: center;
+  margin-bottom: 16px;
+}
+.search-icon { position: absolute; left: 12px; font-size: 0.9rem; }
+.menu-search-input {
+  padding: 9px 36px 9px 34px;
+  border: 1.5px solid #e0d0bc; border-radius: 24px;
+  font-size: 0.88rem; background: #faf6f0;
+  font-family: inherit; width: 240px;
+  transition: border-color .15s;
+}
+.menu-search-input:focus { outline: none; border-color: #c17f4a; }
+.search-clear {
+  position: absolute; right: 12px;
+  background: none; border: none; cursor: pointer;
+  color: #aaa; font-size: 0.85rem;
+}
+
+/* Grid */
+.menu-page-grid-wrap { padding: 40px 48px 80px; max-width: 1280px; margin: 0 auto; }
+.menu-page-loading, .menu-page-empty {
+  text-align: center; padding: 80px; color: #8a6a58; font-size: 1rem;
+}
+.menu-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* Card */
+.menu-page-card {
+  background: #fff; border: 1.5px solid #e8e0d5; border-radius: 8px;
+  overflow: hidden;
+  transition: transform .3s cubic-bezier(0.16,1,0.3,1), box-shadow .3s;
+}
+.menu-page-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(28,15,7,.1); }
+
+.menu-page-card-img {
+  position: relative; width: 100%; height: 200px; overflow: hidden;
+}
+.menu-page-card-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .5s;
+}
+.menu-page-card:hover .menu-page-card-img img { transform: scale(1.05); }
+.menu-page-card-placeholder {
+  width: 100%; height: 100%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, #f0e8db, #e0d0bc);
+}
+
+.menu-promo-tag, .menu-featured-tag {
+  position: absolute; top: 10px; left: 10px;
+  font-size: 0.68rem; font-weight: 700;
+  padding: 3px 10px; border-radius: 3px;
+  text-transform: uppercase; letter-spacing: .05em;
+}
+.menu-promo-tag    { background: #c0392b; color: #fff; }
+.menu-featured-tag { background: #e8a020; color: #fff; }
+
+.menu-page-card-body { padding: 18px 20px 20px; }
+.menu-page-card-cat  { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #c17f4a; margin-bottom: 4px; }
+.menu-page-card-name { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 700; color: #1c0f07; margin-bottom: 6px; line-height: 1.2; }
+.menu-page-card-desc { font-size: .82rem; font-weight: 300; color: #8a6a58; line-height: 1.65; margin-bottom: 16px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+.menu-page-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; }
+.menu-page-price { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.price-normal { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: #1c0f07; }
+.price-strike  { font-size: .82rem; color: #bbb; text-decoration: line-through; }
+.price-promo   { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 700; color: #c0392b; }
+
+.add-to-cart-btn {
+  padding: 8px 18px; background: #1c0f07; color: #fff;
+  border: none; border-radius: 4px;
+  font-size: .82rem; font-weight: 600; cursor: pointer;
+  font-family: inherit; transition: all .2s;
+  white-space: nowrap;
+}
+.add-to-cart-btn:hover  { background: #c17f4a; }
+.add-to-cart-btn.added  { background: #27ae60; }
+
+@media (max-width: 768px) {
+  .menu-page-header, .menu-page-toolbar, .menu-page-grid-wrap { padding-left: 20px; padding-right: 20px; }
+  .menu-page-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+  .menu-search-input { width: 180px; }
+  .cart-fab { right: 20px; }
+}

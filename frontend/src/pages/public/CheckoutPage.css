@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+.checkout-page { min-height: 100vh; background: #faf6f0; font-family: 'DM Sans', sans-serif; }
+
+.checkout-header { background: #1c0f07; padding: 60px 48px 36px; }
+.co-back { display: inline-block; color: rgba(255,255,255,.6); font-size: .85rem; text-decoration: none; margin-bottom: 16px; transition: color .2s; }
+.co-back:hover { color: #c17f4a; }
+.co-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem,4vw,3rem); font-weight: 700; color: #fff; }
+.co-title em { font-style: italic; color: #c17f4a; }
+
+.checkout-layout { display: grid; grid-template-columns: 1fr 420px; gap: 32px; padding: 40px 48px 80px; max-width: 1200px; margin: 0 auto; align-items: start; }
+
+.co-section { background: #fff; border: 1.5px solid #e8e0d5; border-radius: 10px; padding: 24px; margin-bottom: 20px; }
+.co-section h3 { font-size: .88rem; font-weight: 700; color: #1c0f07; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 18px; }
+.co-field { margin-bottom: 16px; }
+.co-field label { display: block; font-size: .75rem; font-weight: 600; color: #4a3728; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+.co-field input, .co-field textarea { width: 100%; padding: 10px 14px; border: 1.5px solid #e0d0bc; border-radius: 6px; font-size: .95rem; background: #faf6f0; font-family: inherit; transition: border-color .15s; }
+.co-field input:focus, .co-field textarea:focus { outline: none; border-color: #c17f4a; background: #fff; }
+.co-field textarea { resize: vertical; }
+
+.co-order-types, .co-payment-opts { display: flex; gap: 10px; flex-wrap: wrap; }
+.co-type-card, .co-pay-card { padding: 10px 18px; border: 1.5px solid #e0d0bc; border-radius: 8px; cursor: pointer; font-size: .88rem; font-weight: 500; color: #4a3728; background: #fafaf8; transition: all .15s; user-select: none; }
+.co-type-card:hover, .co-pay-card:hover { border-color: #c17f4a; }
+.co-type-card.active, .co-pay-card.active { background: #1c0f07; border-color: #1c0f07; color: #fff; }
+
+/* Summary */
+.checkout-summary { background: #fff; border: 1.5px solid #e8e0d5; border-radius: 10px; padding: 24px; position: sticky; top: 20px; }
+.checkout-summary h3 { font-size: .88rem; font-weight: 700; color: #1c0f07; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 18px; }
+
+.co-items { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; max-height: 320px; overflow-y: auto; padding-right: 4px; }
+.co-item { display: flex; align-items: center; gap: 12px; padding: 10px; background: #faf6f0; border-radius: 8px; border: 1px solid #e8e0d5; }
+.co-item-img { width: 44px; height: 44px; border-radius: 6px; overflow: hidden; background: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
+.co-item-img img { width: 100%; height: 100%; object-fit: cover; }
+.co-item-info { flex: 1; min-width: 0; }
+.co-item-name  { font-size: .88rem; font-weight: 500; color: #1c0f07; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.co-item-price { font-size: .78rem; color: #8a6a58; }
+.co-item-qty   { display: flex; align-items: center; gap: 8px; }
+.co-item-qty button { width: 26px; height: 26px; border: 1.5px solid #e0d0bc; border-radius: 4px; background: #fff; cursor: pointer; font-size: .9rem; font-weight: 600; color: #1c0f07; display: flex; align-items: center; justify-content: center; transition: all .15s; }
+.co-item-qty button:hover { border-color: #c17f4a; background: #fdf5ee; }
+.co-item-qty span { font-size: .9rem; font-weight: 600; min-width: 20px; text-align: center; }
+.co-item-remove { background: none; border: none; color: #bbb; cursor: pointer; font-size: .85rem; padding: 4px; transition: color .15s; }
+.co-item-remove:hover { color: #c0392b; }
+
+.co-total { border-top: 1.5px solid #e8e0d5; padding-top: 16px; margin-bottom: 20px; }
+.co-total-row { display: flex; justify-content: space-between; font-size: .88rem; color: #666; margin-bottom: 8px; }
+.co-total-row.total { font-size: 1rem; color: #1c0f07; margin-top: 8px; padding-top: 10px; border-top: 1px dashed #e0d0bc; }
+
+.co-login-warn { background: #fff8ec; border: 1px solid #f5d88a; border-radius: 6px; padding: 10px 14px; font-size: .83rem; color: #7a5200; margin-bottom: 14px; }
+.co-login-warn a { color: #c17f4a; font-weight: 600; }
+.co-error { background: #fef0f0; border: 1px solid #fcc; border-radius: 6px; padding: 10px 14px; font-size: .83rem; color: #c0392b; margin-bottom: 14px; }
+
+.co-submit-btn { width: 100%; padding: 14px; background: #1c0f07; color: #fff; border: none; border-radius: 6px; font-size: .95rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background .2s; letter-spacing: .02em; }
+.co-submit-btn:hover    { background: #c17f4a; }
+.co-submit-btn:disabled { opacity: .5; cursor: not-allowed; background: #1c0f07; }
+.co-auth-link { display: block; text-align: center; margin-top: 12px; color: #c17f4a; font-size: .85rem; font-weight: 600; text-decoration: none; }
+
+/* Empty & Success */
+.checkout-empty, .checkout-success { max-width: 480px; margin: 80px auto; text-align: center; background: #fff; border-radius: 12px; padding: 48px; border: 1.5px solid #e8e0d5; }
+.checkout-empty h3, .checkout-success h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 700; color: #1c0f07; margin-bottom: 10px; }
+.checkout-empty p, .checkout-success p { color: #8a6a58; margin-bottom: 4px; }
+.success-icon { font-size: 3.5rem; margin-bottom: 16px; }
+.success-sub  { font-size: .95rem; color: #8a6a58; margin-bottom: 12px; }
+.order-number { display: inline-block; background: #1c0f07; color: #c17f4a; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; padding: 8px 24px; border-radius: 4px; margin-bottom: 28px; letter-spacing: .1em; }
+
+.order-status-track { display: flex; align-items: center; justify-content: center; gap: 0; margin-bottom: 28px; }
+.status-step { display: flex; flex-direction: column; align-items: center; gap: 6px; position: relative; }
+.step-icon  { width: 44px; height: 44px; border-radius: 50%; background: #e8e0d5; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; transition: background .3s; }
+.status-step.done .step-icon    { background: #27ae60; }
+.status-step.current .step-icon { background: #c17f4a; box-shadow: 0 0 0 4px rgba(193,127,74,.2); }
+.step-label  { font-size: .72rem; font-weight: 600; color: #8a6a58; text-align: center; }
+.status-step.done .step-label, .status-step.current .step-label { color: #1c0f07; }
+.step-line   { position: absolute; top: 22px; left: 44px; width: 60px; height: 2px; background: #e8e0d5; z-index: -1; }
+.status-step.done .step-line { background: #27ae60; }
+
+.order-items-summary { background: #faf6f0; border-radius: 8px; padding: 16px; margin-bottom: 24px; text-align: left; }
+.order-item-row { display: flex; justify-content: space-between; font-size: .88rem; color: #4a3728; padding: 6px 0; border-bottom: 1px solid #e8e0d5; }
+.order-item-row:last-child { border-bottom: none; }
+.order-total-row { display: flex; justify-content: space-between; font-size: .95rem; color: #1c0f07; padding: 10px 0 0; margin-top: 6px; }
+
+.success-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-checkout-primary   { padding: 11px 28px; background: #1c0f07; color: #fff; border-radius: 4px; font-size: .88rem; font-weight: 600; text-decoration: none; transition: background .2s; }
+.btn-checkout-primary:hover   { background: #c17f4a; }
+.btn-checkout-secondary { padding: 11px 28px; border: 1.5px solid #e0d0bc; color: #4a3728; border-radius: 4px; font-size: .88rem; font-weight: 500; text-decoration: none; transition: all .2s; }
+.btn-checkout-secondary:hover { border-color: #c17f4a; }
+
+@media (max-width: 900px) {
+  .checkout-header { padding: 60px 20px 28px; }
+  .checkout-layout { grid-template-columns: 1fr; padding: 24px 20px 60px; }
+  .checkout-summary { position: static; }
+  .status-step:not(:last-child) .step-line { width: 40px; }
+}
