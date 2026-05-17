@@ -334,6 +334,7 @@ function GallerySection({ data }) {
 }
 
 // ─── TESTIMONIALS ─────────────────────────────────────────
+// eslint-disable-next-line no-unused-vars
 function TestimonialsSection({ data }) {
   const items = (data.testimonials || []).filter((t) => t.isVisible);
   if (items.length === 0) return null;
