@@ -1,4 +1,4 @@
-const BASE = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+const BASE = process.env.REACT_APP_API_URL || 'https://amanah-kopi.vercel.app/api';
 const getToken = () => localStorage.getItem('token');
 const authH    = () => ({ 'Content-Type':'application/json', Authorization:`Bearer ${getToken()}` });
 

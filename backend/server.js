@@ -52,3 +52,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
   console.log(`\n🚀  Server: http://localhost:${PORT}  [${process.env.NODE_ENV || 'development'}]\n`)
 );
+module.exports = app;
