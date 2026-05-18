@@ -34,8 +34,8 @@ npm start                # buka http://localhost:3000
 ### 4. Login ke CMS
 Buka: http://localhost:3000/admin/cms
 ```
-Email    : admin@kedaikopi.com
-Password : admin123
+Email    : heri@warungkopi.com
+Password : heri321
 ```
 
 ## Struktur Folder
